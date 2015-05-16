@@ -1,0 +1,126 @@
+/*
+
+    forms:
+    ------------
+    inputs, labels, buttons etc.
+  
+*/
+
+// general form style (textfields, selects etc.)
+
+.input-default {
+  font-size: 1em;
+  font-weight: 400;
+  font-family: @font-stack;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-appearance: none;
+  box-shadow: none;
+  outline-width: 1px;
+  outline-offset: -3px;
+  outline-color: @outline-color;
+  background: @white;
+  border: 1px solid @input-border;
+  padding: 1em;
+  line-height: 1.2;
+  .default-radius;
+}
+
+.form__title {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: @medium;
+}
+
+.form__label {
+  .col.twelve;
+  display: block;
+  font-size: 1em;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: @small / 2; 
+}
+
+.form__btn {
+  .col;
+  .six;
+  padding: 0;
+  padding-top: @small;
+  .btn {
+    width: 100%;
+  }
+}
+
+.input--text {
+  .input-default;
+  .col.twelve;
+}
+
+// wrapper for <select>
+
+.select--wrapper {
+  width: 100%;
+  max-width: @p-width;
+  position: relative;   
+  background: @white;
+  display: inline-block;
+  .default-radius;
+
+  // dropdown icon
+
+  &:after {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    margin-top: -7px;
+    display: block;
+    content: "";
+    z-index: 0;
+  }
+}
+
+// actual <select>
+
+select.form--select {
+  .input-default;
+  font-family: @font-stack;
+  position: relative;
+  z-index: 10;
+  background: transparent;
+  display: inline-block;
+  width: 100%;
+}
+
+// recipe for the basic button
+
+.btn(@color) {
+  transition: all 0.2s ease 0s;
+  font-size: 1em;
+  font-weight: 800;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: @btn-text;
+  outline: none;
+  border: none;
+  line-height: 1;
+  background: @color;
+  padding: 1em 2em;
+  -webkit-font-smoothing: antialiased;
+  .default-radius;
+
+  // only allow hover states on bigger devices
+
+  @media only screen
+  and (min-device-width: 1025px) {
+    &:hover { background: darken(@color, 3%); }
+    &:active { background: darken(@color, 1%); }
+  }
+
+  // add class "light" to buttons where the text color should be dark
+  
+  &.light { color: @btn-text--dark; } 
+
+}

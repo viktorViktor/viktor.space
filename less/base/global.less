@@ -1,0 +1,49 @@
+/*
+
+    global:
+    ------------
+    styles that are not page- or element specific.
+  
+*/
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+}
+
+// wraps whole page 
+.page-container {
+  padding-top: @navbar-height + @medium;
+  width: 100%;
+  height: 100%;
+  max-width: @page-container;
+  margin: auto;
+  position: relative;
+}
+
+// wraps section (centered)
+.container {
+  width: 100%;
+  max-width: @content-width;
+  margin: auto; 
+  padding: 0 @small 0 @small;
+  position: relative;
+}
+
+.navbar {
+  min-height: @navbar-height;
+  background: @navbar-bg;
+  color: @navbar-text;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.page-container {
+  width: 100%;
+}

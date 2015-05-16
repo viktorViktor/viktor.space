@@ -1,0 +1,45 @@
+/*
+
+    grid:
+    ------------
+    setup for grid when needed.
+  
+*/
+
+.row {
+  clear: both;
+  display: block;
+  width: 100%;
+}
+
+.col { 
+  min-height: 1px; // allows empty cols
+  display: block;
+  float: left;
+  height: auto;
+  overflow: hidden;
+  padding-left: @small;
+  padding-right: @small;
+
+  &.right {
+    text-align: right;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  &.one {width: @single-col;}
+  &.two {width: @single-col * 2;}
+  &.three {width: @single-col * 3;}
+  &.four {width: @single-col * 4;}
+  &.five {width: @single-col * 5;}
+  &.six {width: @single-col * 6;}
+  &.seven {width: @single-col * 7;}
+  &.eight {width: @single-col * 8;}
+  &.nine {width: @single-col * 9;}
+  &.ten {width: @single-col * 10;}
+  &.eleven {width: @single-col * 11;}
+  &.twelve {width: @single-col * 12;}
+  &.fullwidth {width: @single-col * @col-count;}
+}

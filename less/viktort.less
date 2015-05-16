@@ -1,0 +1,96 @@
+/*
+
+    viktort:
+    ------------
+    site-specific styles
+
+*/
+
+@redd: #E35050;
+@blakk: #252525;
+//@hilite: @redd;
+@hilite: @blakk;
+
+.red-text {
+  line-height: 1;
+  margin: 0;
+  color: @hilite;
+  font-size: 21px;
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  line-height: 27px;
+}
+
+.title {
+  -webkit-font-smoothing: antialiased;
+  .red-text;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.copy {
+  .red-text;
+  margin-bottom: 30px;
+  letter-spacing: 1.64px;
+  width: 100%;
+  max-width: 580px;
+}
+
+.job-title {
+  em {
+    font-weight: 400;
+    font-style: italic;
+  }
+}
+
+.main-copy {
+
+  .v-center;
+  a {
+    .red-text;
+    .copy;
+    text-decoration: underline;
+    color: @hilite;
+
+   &:visited {
+    color: @hilite;
+   }
+   &:hover {
+    color: @redd;
+   }
+  }
+
+}
+
+a.project-name {
+  font-family: @heading-font;
+  font-weight: bold;
+  font-size: 20px;
+  color: @redd;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 3px;
+  -webkit-font-smoothing: antialiased;
+}
+
+p.project-desc {
+  font-size: 21px;
+  font-style: italic;
+  letter-spacing: 3px;
+}
+
+.project-list {
+
+  li {
+    padding: 10px 0 10px 0;
+    a,a:visited {
+      color: @redd;
+    }
+    &:first-child {
+      padding: 0 0 10px 0;
+    }
+  }
+}

@@ -1,0 +1,81 @@
+/*
+
+    media:
+    ------------
+    responsive and viewport settings.
+  
+*/
+
+// phones –-> phablets
+
+  @media only screen  
+  and (max-width: 640px) {
+
+    body {
+      min-width: 320px;
+      font-size: @em-base-mobile;
+    }
+
+    .input--text {
+      width: 100%;
+      max-width: 100%;
+      display: block;
+    }
+
+    .btn {
+      width: 100%;
+      max-width: 100%;
+      display: block;
+    }
+ 
+  }
+
+// phablets –-> tablets
+
+  @media only screen 
+  and (min-width: 641px) 
+  and (max-width: 1024px) {
+
+    body {
+      font-size: @em-base-tablet;
+    }
+
+  }
+
+// tablets --> small screens
+
+  @media only screen 
+  and (min-width: 1025px) 
+  and (max-width: 1279px) {
+    
+  }
+
+// normal screens --> medium screens
+
+  @media only screen 
+  and (min-width: 1280px) 
+  and (max-width: 1440px) {
+    
+  }
+
+// large screens
+
+  @media only screen 
+  and (min-width: 1441px) {
+    
+  }
+
+// high-res screen settings
+
+  @media
+  only screen and (-webkit-min-device-pixel-ratio : 1.5),
+  only screen and (min-device-pixel-ratio : 1.5) {
+
+  }
+
+// print settings
+
+  @media
+  only print {
+    
+  }

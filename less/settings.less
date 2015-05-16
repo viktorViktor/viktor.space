@@ -1,0 +1,120 @@
+/*
+
+    settings:
+    ------------
+    variables, mixins, shorcuts etc.
+  
+*/
+
+//	color palette
+
+  @blue:                  #0074D9;
+  @blue-alt:              #057DBB;
+  @turquoise:             #259ABC;
+  @green:                 #2EA630;
+  @red:                   #AA112C;
+  @red-dark:              #8C0820;
+  @black:                 #1c1c1c;
+  @black-faded:           rgba(0,0,0,0.2);
+  @grey:                  #a0a0a0;
+  @silver:                #bbbbbb;
+  @white:                 #ffffff;
+  @white-faded:           rgba(255,255,255,0.2);
+  @transparent:           rgba(255,255,255,0);
+
+// mvk-colors
+
+  @mvk-header-blue:       #008391;
+  @mvk-bg-grey:           #e3e3e3;
+  @mvk-info-yellow:       #f8e2a6;
+  @mvk-warning-red:       #eacdce;
+  @mvk-frame-grey:        #ededed;
+  @mvk-hr-grey:           #979797;
+  @mvk-link-blue:         #17646f;
+  @mvk-link-blue-alt:     #00606a; // when font size < 16px
+  @mvk-black:             #000000;
+
+// elements
+
+  @link:                  @mvk-link-blue;
+  @link-inline:           @mvk-link-blue; 
+  @navbar-bg:             @mvk-header-blue;
+  @navbar-text:           @white;
+  @navbar-btn:            @mvk-header-blue;
+  @btn-color:             @transparent;
+  @btn-accept:            @mvk-link-blue;
+  @btn-secondary:         @grey;
+  @btn-tertiary:          @black;
+  @btn-decline:           @red;
+  @btn-text:              @white;
+  @btn-text--dark:        @black;
+  @btn-text--light:       @white;
+  @input-border:          @silver;
+  @shadow:                @black-faded;
+  @outline-color:         @grey;
+  @grey-border:           @silver;
+
+//	typography
+
+	@font-stack: 		        "adobe-caslon-pro", "Adobe Caslon Pro", serif;
+  @heading-font:          "proxima-nova", "Proxima Nova","Helvetica", sans-serif;
+	@font-color: 		        @black;
+	@link-color: 		        @link;
+	@em-base: 			        14px;
+  @em-base-tablet:        14px;
+  @em-base-mobile:        14px;
+  @p-width:               41.429em;
+  @heading-color:         @black;
+
+//  grid
+
+  @row-width:             100%;
+  @col-count:             12;
+  @single-col:            @row-width / @col-count;
+
+// margin sizes
+
+  @small:                 12px;
+  @medium:                @small * 2;
+  @large:                 @small * 3;
+
+// sizes
+
+  @navbar-height:         50px;
+  @content-width:         1024px;
+  @page-container:        1024px;
+
+// shortcuts
+
+  .shadow-inset(@color) {
+    -webkit-box-shadow: inset 0 0px 0px 2px @color;
+    box-shadow: inset 0 0px 0px 2px @color;
+  }
+  .shadow(@color) {
+    -webkit-box-shadow: 0 1px 1px 1px @color;
+    box-shadow: 0 1px 1px 1px @color;
+  }
+  .border-radius(@radius) {
+    -webkit-border-radius: @radius;
+    border-radius: @radius;
+  }
+  .default-radius {
+    .border-radius(3px);
+  }
+  .padding-default {
+    padding: @medium;
+  }
+
+  .v-center {
+    @media screen and (min-width: 768px) {
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+  }
+
+  .clearfix {
+    clear: both;
+  }
