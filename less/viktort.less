@@ -1,15 +1,10 @@
 /*
-
-    viktort:
-    ------------
-    site-specific styles
-
+viktort:
+------------
+site-specific styles
 */
-
 @redd: #E25355;
-//@blakk: #252525;
 @blakk: @redd;
-//@hilite: @redd;
 @hilite: @blakk;
 
 .red-text {
@@ -48,8 +43,13 @@
 }
 
 .main-copy {
-
-  .v-center;
+    @media screen and (min-width: 768px) {
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
   a {
     .red-text;
     .copy;
@@ -63,7 +63,6 @@
     color: @redd;
    }
   }
-
 }
 
 a.project-name {

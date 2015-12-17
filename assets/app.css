@@ -132,239 +132,29 @@ html {
 }
 /*
 
-    typography:
+    settings:
     ------------
-    texts, fonts, margins etc.
+    variables, mixins, shorcuts etc.
   
 */
-body {
-  font-family: "adobe-caslon-pro", "Adobe Caslon Pro", serif;
-  font-size: 14px;
+.default-radius {
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
-h1 {
-  font-size: 2em;
-  margin: 0;
-  font-weight: bold;
+.padding-default {
+  padding: 24px;
 }
-h2 {
-  font-size: 1.5em;
-  margin: 0;
-  font-weight: bold;
+@media screen and (min-width: 768px) {
+  .v-center {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
 }
-h3 {
-  font-size: 1em;
-  margin: 0;
-  font-weight: bold;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: 1;
-  color: #1c1c1c;
-  font-family: "proxima-nova", "Proxima Nova", "Helvetica", sans-serif;
-}
-a {
-  text-decoration: none;
-  color: #17646f;
-}
-a:visited {
-  color: #17646f;
-}
-a:hover {
-  color: #1b7784;
-}
-p {
-  margin: 12px;
-  margin-left: 0;
-  margin-top: 0;
-  padding: 0;
-  line-height: 1.5;
-  width: 100%;
-  max-width: 41.429em;
-  font-weight: 400;
-  font-size: 1em;
-}
-p a {
-  color: #17646f;
-  text-decoration: underline;
-}
-p a:hover {
-  text-decoration: underline;
-}
-p a:visited {
-  color: #17646f;
-}
-hr {
-  border: 0;
-  height: 2px;
-  background: transparent;
-  margin: 12px;
-  margin-top: 0;
-  margin-left: 0;
-  width: 100%;
-}
-small {
-  font-size: 0.7em;
-  font-weight: 600;
-}
-div.black,
-section.black,
-hr.black,
-footer.black,
-header.black,
-article.black,
-button.black,
-input.black {
-  background: #1c1c1c;
-}
-div.white,
-section.white,
-hr.white,
-footer.white,
-header.white,
-article.white,
-button.white,
-input.white {
-  background: #ffffff;
-}
-div.red,
-section.red,
-hr.red,
-footer.red,
-header.red,
-article.red,
-button.red,
-input.red {
-  background: #aa112c;
-}
-div.blue,
-section.blue,
-hr.blue,
-footer.blue,
-header.blue,
-article.blue,
-button.blue,
-input.blue {
-  background: #0074d9;
-}
-div.green,
-section.green,
-hr.green,
-footer.green,
-header.green,
-article.green,
-button.green,
-input.green {
-  background: #2ea630;
-}
-div.grey,
-section.grey,
-hr.grey,
-footer.grey,
-header.grey,
-article.grey,
-button.grey,
-input.grey {
-  background: #a0a0a0;
-}
-h1.black,
-h2.black,
-h3.black,
-h4.black,
-h5.black,
-h6.black,
-span.black,
-p.black,
-strong.black,
-legend.black,
-a.black,
-blockquote.black,
-caption.black,
-li.black {
-  color: #1c1c1c;
-}
-h1.white,
-h2.white,
-h3.white,
-h4.white,
-h5.white,
-h6.white,
-span.white,
-p.white,
-strong.white,
-legend.white,
-a.white,
-blockquote.white,
-caption.white,
-li.white {
-  color: #ffffff;
-}
-h1.red,
-h2.red,
-h3.red,
-h4.red,
-h5.red,
-h6.red,
-span.red,
-p.red,
-strong.red,
-legend.red,
-a.red,
-blockquote.red,
-caption.red,
-li.red {
-  color: #aa112c;
-}
-h1.blue,
-h2.blue,
-h3.blue,
-h4.blue,
-h5.blue,
-h6.blue,
-span.blue,
-p.blue,
-strong.blue,
-legend.blue,
-a.blue,
-blockquote.blue,
-caption.blue,
-li.blue {
-  color: #0074d9;
-}
-h1.green,
-h2.green,
-h3.green,
-h4.green,
-h5.green,
-h6.green,
-span.green,
-p.green,
-strong.green,
-legend.green,
-a.green,
-blockquote.green,
-caption.green,
-li.green {
-  color: #2ea630;
-}
-h1.grey,
-h2.grey,
-h3.grey,
-h4.grey,
-h5.grey,
-h6.grey,
-span.grey,
-p.grey,
-strong.grey,
-legend.grey,
-a.grey,
-blockquote.grey,
-caption.grey,
-li.grey {
-  color: #a0a0a0;
+.clearfix {
+  clear: both;
 }
 /*
 
@@ -632,15 +422,249 @@ select.form--select {
 }
 /*
 
-    viktort:
-    ------------
-    site-specific styles
+typography:
+------------
+texts, fonts, margins etc.
 
+*/
+body {
+  font-family: "adobe-caslon-pro", "Adobe Caslon Pro", serif;
+  font-size: 14px;
+}
+h1 {
+  font-size: 2em;
+  margin: 0;
+  font-weight: bold;
+}
+h2 {
+  font-size: 1.5em;
+  margin: 0;
+  font-weight: bold;
+}
+h3 {
+  font-size: 1em;
+  margin: 0;
+  font-weight: bold;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+  color: #1c1c1c;
+  font-family: "proxima-nova", "Proxima Nova", "Helvetica", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #17646f;
+}
+a:visited {
+  color: #17646f;
+}
+a:hover {
+  color: #1b7784;
+}
+p {
+  margin: 12px;
+  margin-left: 0;
+  margin-top: 0;
+  padding: 0;
+  line-height: 1.5;
+  width: 100%;
+  max-width: 41.429em;
+  font-weight: 400;
+  font-size: 1em;
+}
+p a {
+  color: #17646f;
+  text-decoration: underline;
+}
+p a:hover {
+  text-decoration: underline;
+}
+p a:visited {
+  color: #17646f;
+}
+hr {
+  border: 0;
+  height: 2px;
+  background: transparent;
+  margin: 12px;
+  margin-top: 0;
+  margin-left: 0;
+  width: 100%;
+}
+small {
+  font-size: 0.7em;
+  font-weight: 600;
+}
+div.black,
+section.black,
+hr.black,
+footer.black,
+header.black,
+article.black,
+button.black,
+input.black {
+  background: #1c1c1c;
+}
+div.white,
+section.white,
+hr.white,
+footer.white,
+header.white,
+article.white,
+button.white,
+input.white {
+  background: #ffffff;
+}
+div.red,
+section.red,
+hr.red,
+footer.red,
+header.red,
+article.red,
+button.red,
+input.red {
+  background: #AA112C;
+}
+div.blue,
+section.blue,
+hr.blue,
+footer.blue,
+header.blue,
+article.blue,
+button.blue,
+input.blue {
+  background: #0074D9;
+}
+div.green,
+section.green,
+hr.green,
+footer.green,
+header.green,
+article.green,
+button.green,
+input.green {
+  background: #2EA630;
+}
+div.grey,
+section.grey,
+hr.grey,
+footer.grey,
+header.grey,
+article.grey,
+button.grey,
+input.grey {
+  background: #a0a0a0;
+}
+h1.black,
+h2.black,
+h3.black,
+h4.black,
+h5.black,
+h6.black,
+span.black,
+p.black,
+strong.black,
+legend.black,
+a.black,
+blockquote.black,
+caption.black,
+li.black {
+  color: #1c1c1c;
+}
+h1.white,
+h2.white,
+h3.white,
+h4.white,
+h5.white,
+h6.white,
+span.white,
+p.white,
+strong.white,
+legend.white,
+a.white,
+blockquote.white,
+caption.white,
+li.white {
+  color: #ffffff;
+}
+h1.red,
+h2.red,
+h3.red,
+h4.red,
+h5.red,
+h6.red,
+span.red,
+p.red,
+strong.red,
+legend.red,
+a.red,
+blockquote.red,
+caption.red,
+li.red {
+  color: #AA112C;
+}
+h1.blue,
+h2.blue,
+h3.blue,
+h4.blue,
+h5.blue,
+h6.blue,
+span.blue,
+p.blue,
+strong.blue,
+legend.blue,
+a.blue,
+blockquote.blue,
+caption.blue,
+li.blue {
+  color: #0074D9;
+}
+h1.green,
+h2.green,
+h3.green,
+h4.green,
+h5.green,
+h6.green,
+span.green,
+p.green,
+strong.green,
+legend.green,
+a.green,
+blockquote.green,
+caption.green,
+li.green {
+  color: #2EA630;
+}
+h1.grey,
+h2.grey,
+h3.grey,
+h4.grey,
+h5.grey,
+h6.grey,
+span.grey,
+p.grey,
+strong.grey,
+legend.grey,
+a.grey,
+blockquote.grey,
+caption.grey,
+li.grey {
+  color: #a0a0a0;
+}
+/*
+viktort:
+------------
+site-specific styles
 */
 .red-text {
   line-height: 1;
   margin: 0;
-  color: #252525;
+  color: #E25355;
   font-size: 21px;
   line-height: 27px;
 }
@@ -654,7 +678,7 @@ select.form--select {
   -webkit-font-smoothing: antialiased;
   line-height: 1;
   margin: 0;
-  color: #252525;
+  color: #E25355;
   font-size: 21px;
   line-height: 27px;
   letter-spacing: 3px;
@@ -670,7 +694,7 @@ select.form--select {
 .copy {
   line-height: 1;
   margin: 0;
-  color: #252525;
+  color: #E25355;
   font-size: 21px;
   line-height: 27px;
   margin-bottom: 30px;
@@ -707,7 +731,7 @@ select.form--select {
   width: 100%;
   max-width: 580px;
   text-decoration: underline;
-  color: #252525;
+  color: #E25355;
 }
 @media screen and (max-width: 768px) {
   .main-copy a {
@@ -722,16 +746,16 @@ select.form--select {
   }
 }
 .main-copy a:visited {
-  color: #252525;
+  color: #E25355;
 }
 .main-copy a:hover {
-  color: #e35050;
+  color: #E25355;
 }
 a.project-name {
   font-family: "proxima-nova", "Proxima Nova", "Helvetica", sans-serif;
   font-weight: bold;
   font-size: 20px;
-  color: #e35050;
+  color: #E25355;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 3px;
@@ -747,7 +771,7 @@ p.project-desc {
 }
 .project-list li a,
 .project-list li a:visited {
-  color: #e35050;
+  color: #E25355;
 }
 .project-list li:first-child {
   padding: 0 0 10px 0;
@@ -779,30 +803,4 @@ p.project-desc {
   body {
     font-size: 14px;
   }
-}
-/*
-
-    settings:
-    ------------
-    variables, mixins, shorcuts etc.
-  
-*/
-.default-radius {
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-}
-.padding-default {
-  padding: 24px;
-}
-@media screen and (min-width: 768px) {
-  .v-center {
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
-}
-.clearfix {
-  clear: both;
 }
