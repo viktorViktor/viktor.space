@@ -664,13 +664,13 @@ site-specific styles
 .red-text {
   line-height: 1;
   margin: 0;
-  color: #E25355;
-  font-size: 21px;
+  color: #313131;
+  font-size: 23px;
   line-height: 27px;
 }
 @media screen and (max-width: 768px) {
   .red-text {
-    font-size: 20px;
+    font-size: 22px;
     line-height: 24px;
   }
 }
@@ -678,24 +678,25 @@ site-specific styles
   -webkit-font-smoothing: antialiased;
   line-height: 1;
   margin: 0;
-  color: #E25355;
-  font-size: 21px;
+  color: #313131;
+  font-size: 23px;
   line-height: 27px;
   letter-spacing: 3px;
   text-transform: uppercase;
   margin-bottom: 40px;
+  font-size: 22px;
 }
 @media screen and (max-width: 768px) {
   .title {
-    font-size: 20px;
+    font-size: 22px;
     line-height: 24px;
   }
 }
 .copy {
   line-height: 1;
   margin: 0;
-  color: #E25355;
-  font-size: 21px;
+  color: #313131;
+  font-size: 23px;
   line-height: 27px;
   margin-bottom: 30px;
   letter-spacing: 1.64px;
@@ -704,7 +705,7 @@ site-specific styles
 }
 @media screen and (max-width: 768px) {
   .copy {
-    font-size: 20px;
+    font-size: 22px;
     line-height: 24px;
   }
 }
@@ -724,38 +725,38 @@ site-specific styles
 .main-copy a {
   line-height: 1;
   margin: 0;
-  font-size: 21px;
+  font-size: 23px;
   line-height: 27px;
   margin-bottom: 30px;
   letter-spacing: 1.64px;
   width: 100%;
   max-width: 580px;
   text-decoration: underline;
-  color: #E25355;
+  color: #313131;
 }
 @media screen and (max-width: 768px) {
   .main-copy a {
-    font-size: 20px;
+    font-size: 22px;
     line-height: 24px;
   }
 }
 @media screen and (max-width: 768px) {
   .main-copy a {
-    font-size: 20px;
+    font-size: 22px;
     line-height: 24px;
   }
 }
 .main-copy a:visited {
-  color: #E25355;
+  color: #313131;
 }
 .main-copy a:hover {
-  color: #E25355;
+  color: #dd2a30;
 }
 a.project-name {
   font-family: "proxima-nova", "Proxima Nova", "Helvetica", sans-serif;
   font-weight: bold;
   font-size: 20px;
-  color: #E25355;
+  color: #dd2a30;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 3px;
@@ -771,7 +772,7 @@ p.project-desc {
 }
 .project-list li a,
 .project-list li a:visited {
-  color: #E25355;
+  color: #dd2a30;
 }
 .project-list li:first-child {
   padding: 0 0 10px 0;
