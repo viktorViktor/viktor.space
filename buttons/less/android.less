@@ -1,0 +1,218 @@
+
+// general button recipe
+
+.android-btn(@bg,@fontColor,@pressedBg,@pressedFontColor,@selectedBg,@selectedFontColor) {  
+  background: @bg;
+  color: @fontColor;
+  box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 2px 0px rgba(0,0,0,0.14);
+  -webkit-user-select: none;
+  margin: 16px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  outline: none;
+  border-radius: 2px;
+  display: inline-block;
+  clear: both;
+  padding: 10px 14px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+
+
+  // smaller button
+  
+  &.sm {
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: capitalize;
+    padding: 7px 10px;
+    letter-spacing: 0.1px;
+
+    &.btn--follow {
+      padding-bottom: 9px;
+    }
+
+  }
+  
+  // "selected" state
+
+  &.selected {
+    background: @selectedBg;
+    color: @selectedFontColor;
+  }
+  
+  // "pressed" state
+
+  &:active {
+    background: @pressedBg;
+    color: @pressedFontColor;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.12), 0px 5px 5px 0px rgba(0,0,0,0.24);
+  }
+
+}
+
+
+.android-buttons {
+  width: 100%;
+  
+ .btn--default {
+    .android-btn(
+      @default-bg,
+      @white,
+      @default-bg-pressed,
+      @white,
+      @default-bg-selected,
+      @white
+      );  
+  }
+
+  .btn--special {
+    .android-btn(
+      @special-bg,
+      @white,
+      @special-bg-pressed,
+      @white,
+      @special-bg-selected,
+      @white
+      );  
+  }
+
+  .btn--flat-bl {
+    .android-btn(
+      @flat-bg,
+      @black,
+      @flat-bg-pressed,
+      @black,
+      @flat-bg-selected,
+      @black
+      );  
+      box-shadow: none;
+    &:active {
+      //box-shadow: none;
+    }
+  }
+
+  .btn--flat-wh {
+    .android-btn(
+      @flat-bg,
+      @white,
+      @flat-bg-pressed,
+      @white,
+      @flat-bg-selected,
+      @white
+      );  
+      box-shadow: none;
+    &:active {
+      //box-shadow: none;
+    }
+  }
+
+  .btn--subscribe {
+    .android-btn(
+      @subscribe-bg,
+      @black,
+      @subscribe-bg-pressed,
+      @black,
+      @subscribe-bg-selected,
+      @black
+      );  
+  }
+
+  .btn--ghost-black {
+    .android-btn(
+      @ghost-bg,
+      @black,
+      @ghost-bg-pressed,
+      @black,
+      @black,
+      @white
+      );  
+      box-shadow: @ghost-shadow-bl;
+    &:active {
+     //box-shadow: @ghost-shadow-bl;
+    }
+  }
+
+  .btn--ghost-white {
+    .android-btn(
+      @ghost-bg,
+      @white,
+      @ghost-bg-pressed,
+      @white,
+      @white,
+      @black
+      );  
+      box-shadow: @ghost-shadow-wh;
+    &:active {
+      //box-shadow: @ghost-shadow-wh;
+    }
+  }
+
+  .btn--tag {
+    .android-btn(
+      @tag-bg,
+      @blue,
+      @tag-bg-pressed,
+      @blue,
+      transparent,
+      @blue
+      );  
+      box-shadow: @tag-shadow; 
+
+    &:active {
+      box-shadow: @tag-shadow;
+      background: fade(@blue,5%);
+    }
+
+    &.selected {
+      box-shadow: @tag-shadow;
+    }
+  }
+
+  .btn--follow-bl {
+    .btn--ghost-black;
+    &:before {
+      content: "+";
+      font-size: 16px;
+      color: #595959;
+      margin-right: 3px;
+    }
+    &.selected {
+      &:before {
+        color: white;
+      }
+    }
+
+    &:active {
+      //box-shadow: @ghost-shadow-bl;
+    }
+  }
+
+  .btn--follow-wh {
+    .btn--ghost-white;
+    &:before {
+      content: "+";
+      font-size: 16px;
+      color: @white;
+      margin-right: 3px;
+    }
+    &.selected {
+      &:before {
+        color: @black;
+      }
+    }
+    &:active {
+      //box-shadow: @ghost-shadow-wh;
+    }
+  }
+}
